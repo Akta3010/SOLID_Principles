@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Student s = new Student(new StudentRepository());
+            Student s = new Student(AbstractFactory.getInstanceOfStudentRepo());
             s.SaveStudent();
 
-            Student onlineS = new Student(new OnlineStudentRepository());
+            Student onlineS = new Student(AbstractFactory.getInstanceOfOnlineStudentRepo());
             onlineS.SaveStudent();
         }
     }
